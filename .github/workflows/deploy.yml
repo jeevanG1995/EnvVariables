@@ -9,9 +9,9 @@ env:
 jobs:
   test:
     env:
-      MONGODB_CLUSTER_ADDRESS: cluster0.rceyehg.mongodb.net
-      MONGODB_USERNAME: mailjeevanv
-      MONGODB_PASSWORD: av16a71Qikq6g3u0
+      MONGODB_CLUSTER_ADDRESS: ${{env.MONGODB_CLUSTER_ADDRESS}}
+      MONGODB_USERNAME: ${{secrets.MONGODB_USERNAME}}
+      MONGODB_PASSWORD: ${{secrets.MONGODB_PASSWORD}}
       PORT: 8080
     environment: testing
     runs-on: ubuntu-latest
